@@ -5,7 +5,8 @@
 }
 
 .show-card {
-  width: calc((100% - 40px) / 2);
+  width: calc((100% - 20px) / 2);
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

@@ -12,6 +12,14 @@ const MovieList = () => {
       <div className="show-card">
         <div className="show-image-area">
           <img src="https://image.tmdb.org/t/p/original//ovZ0zq0NwRghtWI1oLaM0lWuoEw.jpg" alt="show" />
+          <div className="card-actions">
+            <p className='card-action-button'>
+              <FiEdit2 />
+            </p>
+            <p className='card-action-button'>
+            <MdDeleteOutline />
+            </p>
+          </div>
         </div>
         <div className="show-txt-area">
           <div>
@@ -29,10 +37,7 @@ const MovieList = () => {
             </div>
           </div>
         </div>
-        {/* <div className="show-button-area">
-          <button>Edit</button>
-          <button>Delete</button>
-        </div> */}
+       
       </div>
 
 
@@ -64,10 +69,7 @@ const MovieList = () => {
             </div>
           </div>
         </div>
-        {/* <div className="show-button-area">
-          <button>Edit</button>
-          <button>Delete</button>
-        </div> */}
+    
       </div>
     </div>
   )
