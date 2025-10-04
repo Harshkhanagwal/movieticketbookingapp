@@ -32,7 +32,6 @@ const Theaters = () => {
                                 </div>
 
                                 <form className='add-theater-form'>
-
                                     <input type="text" placeholder='Theater Name' />
                                     <input type="text" placeholder='Theater Address' />
                                     <input type="url" placeholder='Logo URL' />
