@@ -1,4 +1,4 @@
-import React from 'react'
+    import React from 'react'
 import './Aside.css'
 import { NavLink } from 'react-router-dom';
 
@@ -28,8 +28,12 @@ const Aside = () => {
         <NavLink to={'/shows'} className={"navlink"}>
           <BiSolidMoviePlay className='nav-icon' /><span> Shows</span>
         </NavLink>
-        
+
       </nav>
+
+      <button className="btn-logout">
+          Logout
+      </button>
     </aside>
   )
 }

@@ -54,3 +54,17 @@ aside{
     right: 0;
     background-color:#c48ffd ;
 }
+
+
+.btn-logout{
+    width:calc( 100% - 20px);
+    position: absolute;
+    
+    padding: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    
+}

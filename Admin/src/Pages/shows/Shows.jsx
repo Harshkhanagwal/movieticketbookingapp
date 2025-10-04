@@ -41,7 +41,6 @@ const Shows = () => {
                   <option value="Theater 4">Theater 4</option>
                   <option value="Theater 5">Theater 5</option>
                 </select>
-
                 <select name="screen" >
                   <option value="" disabled selected>Select Screen</option>
                   <option value="Screen 1">Screen 1</option>
