@@ -1,0 +1,62 @@
+        .popuparea {
+            display: flex;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            background-color: #000000a5;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .popupbox {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .popupheader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .popup-close-btn {
+            cursor: pointer;
+        }
+
+        .add-theater-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            gap: 15px;
+            margin-top: 20px;
+
+        }
+
+        .add-theater-form * {
+            width: 100%;
+
+        }
+
+        .add-theater-form input {
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid #7c7c7c;
+        }
+
+        .add-theater-form input:active {
+        }
+        
+        .add-theater-form input:focus {
+            outline: none;
+            border-bottom: 2px solid #c48ffd;
+
+        }
