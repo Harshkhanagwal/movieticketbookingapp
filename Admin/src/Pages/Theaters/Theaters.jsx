@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import './Theaters.css'
 
-// icons
+//icons
+import { IoTrashBin } from "react-icons/io5";
 import { MdOutlineAddToQueue } from "react-icons/md";
+import { FaEye } from "react-icons/fa";
+
 import { IoClose } from "react-icons/io5";
+
+import { FaPencilAlt } from "react-icons/fa";
 
 const Theaters = () => {
     const [popup, setPopup] = useState(false)
@@ -44,21 +49,21 @@ const Theaters = () => {
                 <table>
                     <thead>
                         <tr>
-                            <th>Logo</th>
-                            <th>Name</th>
-                            <th>Available Screens</th>
-                            <th>Actions</th>
+                            <th>logo</th>
+                            <th>Name </th>
+                            <th>Avialable screens</th>
+                            <th className='theater-actions-head'><span>Actions</span></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
+                            <td className='t-l-td'>
                                 <div className='theater-logo'>
                                     <img
                                         src="https://animationxpress.com/wp-content/uploads/2018/06/PVR-logo.png"
                                         alt="Theater Logo"
                                         style={{
-                                            width: '60px',
+                                            width: '40px',
                                             height: '40px',
                                             objectFit: 'cover',
                                             borderRadius: '6px'
@@ -66,12 +71,16 @@ const Theaters = () => {
                                     />
                                 </div>
                             </td>
-                            <td>PVR <span className='view-btn'>👁️</span></td>
+                            <td>
+                            <div className="view">
+                                <button className='view-btn'><FaEye /></button>PVR 
+                                </div>
+                                </td>
                             <td>2</td>
                             <td>
                                 <div className='theater-actions'>
-                                    <button className='edit-btn'>Edit</button>
-                                    <button className='delete-btn'>Delete</button>
+                                    <button className='edit-btn'><FaPencilAlt />Edit</button>
+                                    <button className='delete-btn'><IoTrashBin /> Delete</button>
                                 </div>
                             </td>
                         </tr>

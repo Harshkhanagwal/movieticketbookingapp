@@ -58,6 +58,11 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     border: 1px solid #e5e7eb;
 }
+/* 
+.theaters-list table tbody tr:hover {
+    background: #c48ffd94;
+} */
+
 
 .theaters-list thead {
     background: #f8fafc;
@@ -82,10 +87,17 @@
 
 .theaters-list tbody tr:hover {
     background: #f9fafb;
+    cursor: pointer;
 }
 
 .theaters-list tbody tr:last-child td {
     border-bottom: none;
+}
+
+.t-l-td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .theater-logo {
@@ -99,10 +111,22 @@
     border: 1px solid #e5e7eb;
 }
 
+.view {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+
 .view-btn {
     margin-left: 8px;
     cursor: pointer;
     opacity: 0.6;
+    background-color: transparent;
+    color: #000;
+    padding: 0;
+    font-size: 28px;
     transition: opacity 0.2s ease;
 }
 
@@ -113,7 +137,9 @@
 .theater-actions {
     display: flex;
     gap: 8px;
+    align-items: center;
 }
+
 
 .theater-actions button {
     padding: 6px 12px;
@@ -129,10 +155,28 @@
     letter-spacing: 0.025em;
 }
 
+.view-btn {
+    background: transparent;
+}
+
+.theater-actions .edit-btn {
+    background-color: #55F25A;
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.theater-actions .delete-btn {
+    background-color: #9b4343;
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+}
+
 .theater-actions .edit-btn:hover {
-    background: #3b82f6;
+    background: #429345;
     color: #fff;
-    border-color: #3b82f6;
+    border-color: #2AF531;
 }
 
 .theater-actions .delete-btn:hover {
@@ -157,4 +201,22 @@
         flex-direction: column;
         gap: 4px;
     }
+}
+
+.theaters-list th:nth-child(1),
+.theaters-list td:nth-child(1) {
+    width: 120px;
+    text-align: center;
+}
+
+.theaters-list th:nth-child(4),
+.theaters-list td:nth-child(4) {
+    width: 240px;
+    text-align: center;
+}
+
+.theaters-list th:nth-child(3),
+.theaters-list td:nth-child(3) {
+    width: 80px;
+    text-align: center;
 }
