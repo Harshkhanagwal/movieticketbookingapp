@@ -2,11 +2,11 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .show-card {
   width: calc((100% - 20px) / 2);
-  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
