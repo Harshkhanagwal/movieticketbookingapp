@@ -1,235 +1,225 @@
-        .popuparea {
-            display: flex;
-            position: fixed;
-            height: 100vh;
-            width: 100vw;
-            background-color: #000000a5;
-            align-items: center;
-            justify-content: center;
-            top: 0;
-            left: 0;
-            backdrop-filter: blur(10px);
-        }
+.add-theater-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 18px;
+}
+.add-theater-form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #7c7c7c;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.add-theater-form input:focus {
+    outline: none;
+    border-bottom: 2px solid #c48ffd;
+}
 
-        .popupbox {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            width: 600px;
-            display: flex;
-            flex-direction: column;
-        }
+/* Submit button styling */
+.add-theater-form button {
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+.add-theater-form button:hover {
+    background-color: #7a4bff;
+}
 
-        .popupheader {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+/* Theater List Styles */
+.theaters-list {
+    margin-top: 30px;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.theaters-list table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+/* 
+.theaters-list table tbody tr:hover {
+    background: #c48ffd94;
+} */
+.theaters-list thead {
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+}
+.theaters-list th {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #374151;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+.theaters-list td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
+.theaters-list tbody tr:hover {
+    background: #f9fafb;
+    cursor: pointer;
+}
+.theaters-list tbody tr:last-child td {
+    border-bottom: none;
+}
+.t-l-td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.theater-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theater-logo img {
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+}
+.view {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+}
+.view-btn {
+    margin-left: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: transparent;
+    color: #000;
+    padding: 0;
+    font-size: 28px;
+    transition: opacity 0.2s ease;
+}
+.view-btn:hover {
+    opacity: 1;
+}
+.theater-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.theater-actions button {
+    padding: 6px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background: #fff;
+    color: #374151;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+.view-btn {
+    background: transparent;
+}
+.theater-actions.edit-btn {
+    background-color: #55F25A;
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+}
+.theater-actions.delete-btn {
+    background-color: #9b4343;
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+}
+.theater-actions.edit-btn:hover {
+    background: #429345;
+    color: #fff;
+    border-color: #2AF531;
+}
+.theater-actions.delete-btn:hover {
+    background: #ef4444;
+    color: #fff;
+    border-color: #ef4444;
+}
 
-        .popup-close-btn {
-            cursor: pointer;
-        }
-
-        .add-theater-form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 100%;
-            gap: 15px;
-            margin-top: 20px;
-
-        }
-
-        .add-theater-form * {
-            width: 100%;
-
-        }
-
-        .add-theater-form input {
-            padding: 10px;
-            border: none;
-            border-bottom: 2px solid #7c7c7c;
-        }
-     
-
-
-        .add-theater-form input:active {
-        }
-        
-        .add-theater-form input:focus {
-            outline: none;
-            border-bottom: 2px solid #c48ffd;
-        }
-
-        /* Theater List Styles */
-        .theaters-list {
-            margin-top: 30px;
-            max-width: 1200px;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .theaters-list table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e5e7eb;
-        }
-        .theaters-list table tbody tr:hover{
-            background: #c48ffd94;
-        }
-        
-
-        .theaters-list thead {
-            background: #f8fafc;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .theaters-list th {
-            padding: 16px 20px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: #374151;
-            letter-spacing: 0.025em;
-            text-transform: uppercase;
-        }
-
-        .theaters-list td {
-            padding: 16px 20px;
-            border-bottom: 1px solid #f3f4f6;
-            vertical-align: middle;
-        }
-
-        .theaters-list tbody tr:hover {
-            background: #f9fafb;
-            cursor: pointer;
-        }
-
-        .theaters-list tbody tr:last-child td {
-            border-bottom: none;
-        }
-        .t-l-td{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .theater-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .theater-logo img {
-            border-radius: 4px;
-            border: 1px solid #e5e7eb;
-        }
-        
-        .view{
-            display: flex;
-            align-items: center;
-            gap:10px;
-            text-align: center;
-            width: 100%;
-            /* justify-content: center; */
-        }
-        .view-btn {
-            margin-left: 8px;
-            cursor: pointer;
-            opacity: 0.6;
-            background-color: transparent;
-            color: #000;
-            padding: 0;
-            font-size: 28px;
-            transition: opacity 0.2s ease;
-        }
-
-        .view-btn:hover {
-            opacity: 1;
-        }
-
-        .theater-actions {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        
-
-        .theater-actions button {
-            padding: 6px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 4px;
-            background: #fff;
-            color: #374151;
-            font-size: 0.75rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.025em;
-        }
-        .view-btn{
-            background: transparent;
-        }
-        .theater-actions .edit-btn{
-            background-color: #55F25A;
-            color:#000;
-            padding: 10px;
-            font-size: 18px;
-        }
-        .theater-actions .delete-btn{
-            background-color: #F55151;
-            color:#000;
-            padding: 10px;
-            font-size: 18px;
-        }
-        .theater-actions .edit-btn:hover {
-            background: #2AF531;
-            color: #fff;
-            border-color: #2AF531;
-        }
-
-        .theater-actions .delete-btn:hover {
-            background: #ef4444;
-            color: #fff;
-            border-color: #ef4444;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .theaters-list {
-                margin: 20px;
-                max-width: none;
-            }
-            
-            .theaters-list th,
-            .theaters-list td {
-                padding: 12px 16px;
-            }
-            
-            .theater-actions {
-                flex-direction: column;
-                gap: 4px;
-            }
-        }
-        .theaters-list th:nth-child(1),
+/* Responsive design */
+@media (max-width: 768px) {
+    .theaters-list {
+        margin: 20px;
+        max-width: none;
+    }
+    .theaters-list th,
+    .theaters-list td {
+        padding: 12px 16px;
+    }
+    .theater-actions {
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+.theaters-list th:nth-child(1),
 .theaters-list td:nth-child(1) {
-    width: 120px; 
+    width: 120px;
     text-align: center;
 }
-        .theaters-list th:nth-child(4),
+.theaters-list th:nth-child(4),
 .theaters-list td:nth-child(4) {
-    width: 240px; 
+    width: 240px;
     text-align: center;
 }
 .theaters-list th:nth-child(3),
 .theaters-list td:nth-child(3) {
-    width: 80px; 
+    width: 80px;
     text-align: center;
-}  
- 
+}
+.theater_popup_details {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.theater_popup_details_logo {
+    max-width: 80px;
+    border: #000 1px solid;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.seleted-theater-location-text {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.seleted-theater-Screen-text {
+    font-weight: bold;
+}
+
+.theater_popup_txt{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.location_icon_popup{
+    font-size: 14px;
+}

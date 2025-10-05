@@ -1,30 +1,27 @@
-import { useState } from 'react'
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Aside from './components/Aside/Aside'
-import Importmovies from './Pages/ImportMovies/Importmovies'
-import Theaters from './Pages/Theaters/Theaters'
+import { useState } from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./App.css";
+
+import Login from "./Pages/Login/Login";
+import Dashboard from "./Dashboard";
 
 function App() {
+  const [token, setToken] = useState(true); // false means user not logged in
 
   return (
-    <>
-      <BrowserRouter>
-        <Aside></Aside>
-        <main>
-
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/import-movies" element={<Importmovies />} />
-            <Route path="/theaters" element={<Theaters />} />
-          </Routes>
-        </main>
-      </BrowserRouter>
-
-      // app.jsx
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/login"
+          element={token ? <Navigate to="/" /> : <Login />}
+        />
+        <Route
+          path="/*"
+          element={token ? <Dashboard /> : <Navigate to="/login" />}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

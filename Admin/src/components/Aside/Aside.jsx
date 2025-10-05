@@ -7,6 +7,9 @@ import { MdSpaceDashboard } from "react-icons/md";
 import { TbDatabaseImport } from "react-icons/tb";
 import { RiHome4Line } from "react-icons/ri";
 import { GiTheater } from "react-icons/gi";
+import { BiSolidMoviePlay } from "react-icons/bi";
+
+
 const Aside = () => {
   return (
     <aside>
@@ -22,7 +25,15 @@ const Aside = () => {
         <NavLink to={'/theaters'} className={"navlink"}>
           <GiTheater className='nav-icon' /><span> Theaters</span>
         </NavLink>
+        <NavLink to={'/shows'} className={"navlink"}>
+          <BiSolidMoviePlay className='nav-icon' /><span> Shows</span>
+        </NavLink>
+
       </nav>
+
+      <button className="btn-logout">
+          Logout
+      </button>
     </aside>
   )
 }
