@@ -81,7 +81,7 @@ const Theaters = () => {
                                     className='app-icon popup-close-btn'/>
                             </div>
 
-                            <form className='add-theater-form'>
+                            <form className='popup-form'>
                                 <input type="text" placeholder='Theater Name'/>
                                 <input type="text" placeholder='Theater Address'/>
                                 <input type="url" placeholder='Logo URL'/>
